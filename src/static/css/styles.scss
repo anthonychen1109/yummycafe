@@ -1,0 +1,205 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+// ################### NAVBAR #####################
+
+ul.topnav {
+  align-items: center;
+  background-color: $nav-background-color;
+  color: $nav-anchor-color;
+  display: flex;
+  font-size: $nav-font-size;
+  height: $nav-height;
+  justify-content: space-around;
+  opacity: $opacity;
+  padding-left: 0;
+  li {
+    list-style: none;
+    a {
+      color: $nav-anchor-color;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+ul.topnav {
+  li.dropdownIcon {
+    display: none;
+  }
+}
+
+// ################### ABOUT #####################
+.about {
+  display: flex;
+  justify-content: space-around;
+  .about-image {
+    flex: 1;
+    padding: 0 16px 16px 0;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .about-text {
+    flex: 1;
+    padding: 0 16px 16px 0;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+// ################### MENU #####################
+.menu-header {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  width: 33%;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-display {
+  flex: 2;
+}
+
+
+// ################### FOOTER #####################
+.footer {
+  align-items: center;
+  background-color: $footer-background-color;
+  color: $footer-font-color;
+  display: flex;
+  font-size: $footer-font-size;
+  height: $footer-height;
+  justify-content: space-around;
+  opacity: $opacity;
+  li {
+    list-style: none;
+    text-transform: uppercase;
+    a {
+      color: $footer-font-color;
+      text-decoration: none;
+    }
+  }
+}
+
+ul.footer {
+  bottom: 0;
+  padding-left: 0;
+  position: fixed;
+  width: 100%;
+  li.footer-hours {
+    display: none;
+  }
+  li.footer-pin {
+    display: none;
+  }
+  li.footer-tel {
+    display: none;
+  }
+}
+
+ul.modal-hours {
+  li {
+    list-style: none;
+  }
+}
+
+// ################### MOBILE #####################
+
+@media only screen and (max-width: 800px) {
+// ################### NAVBAR #####################
+  ul.topnav {
+    align-items: center;
+    li:not(:nth-child(1)) {
+      display: none;
+    }
+    li.logo {
+      margin: 0 auto;
+    }
+    li.dropdownIcon {
+      display: block;
+      padding-right: $nav-padding;
+    }
+  }
+
+  ul.responsive {
+    background-color: $nav-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: $opacity;
+    position: relative;
+    li {
+       display: inline;
+       list-style: none;
+       float: none;
+       a {
+           color: $nav-anchor-color;
+           display: block;
+           font-size: $nav-font-size;
+           margin-bottom: $nav-margin;
+           padding-top: $nav-padding;
+           text-decoration: none;
+         }
+     }
+  }
+
+  ul.responsive li.dropdownIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: $nav-padding;
+  }
+
+// ################### ABOUT #####################
+
+  .about {
+    flex-direction: column;
+  }
+
+// ################### FOOTER #####################
+
+  ul.footer {
+    li {
+      display: none;
+    }
+  }
+
+  ul.footer {
+    li.footer-hours {
+      display: block;
+    }
+    li.footer-pin {
+      display: block;
+    }
+    li.footer-tel {
+      display: block;
+    }
+  }
+
+}

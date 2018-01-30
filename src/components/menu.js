@@ -24,7 +24,7 @@ class Menu extends Component {
         <h2 className="menu-header">Menu</h2>
         <div className="menu">
           <div id="menu" className="menu-nav">
-            <a href="#menu">Dim Sum/Appetizers 小吃</a>
+            <a href="#menu" onClick={this.showAppetizer}>Dim Sum/Appetizers 小吃</a>
             <a href="#menu">Cold Dish 凉菜</a>
             <a href="#menu">Soup 汤</a>
             <a href="#menu">Cook Specials 特色推荐</a>
