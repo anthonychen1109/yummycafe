@@ -8,24 +8,36 @@ class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: false,
+      currentItem: ''
     };
-    this.showDisplay = this.showDisplay.bind(this);
+    this.setItem = this.setItem.bind(this);
+    this.renderItem = this.renderItem.bind(this);
   }
 
-  showDisplay() {
-    this.setState({ display: !this.state.display})
+  setItem = (item) => {
+    this.setState({currentItem: item});
+  }
+
+  renderItem = (item) => {
+    console.log("renderItem", this.state.currentItem);
+    switch(item) {
+      case 'appetizer':
+        return <Appetizer />
+      case 'cold_dish':
+        return <ColdDish />
+      default:
+        return null
+    }
   }
 
   render() {
-    console.log(this.state.display);
     return (
       <div className="container">
         <h2 className="menu-header">Menu</h2>
         <div className="menu">
-          <div id="menu" className="menu-nav">
-            <a href="#menu" onClick={this.showAppetizer}>Dim Sum/Appetizers 小吃</a>
-            <a href="#menu">Cold Dish 凉菜</a>
+          <div className="menu-nav">
+            <a href="#menu" onClick={() => this.setItem('appetizer')}>Dim Sum/Appetizers 小吃</a>
+            <a href="#menu" onClick={() => this.setItem('cold_dish')}>Cold Dish 凉菜</a>
             <a href="#menu">Soup 汤</a>
             <a href="#menu">Cook Specials 特色推荐</a>
             <a href="#menu">Noodle/Cold Noodle 面/凉面</a>
@@ -37,11 +49,12 @@ class Menu extends Component {
             <a href="#menu">Pork 肉</a>
             <a href="#menu">Duck鸭</a>
             <a href="#menu">Rabbit 兔</a>
-            <a href="#menu">Rice Combo盖饭（with steamed white rice</a>
+            <a href="#menu">Rice Combo盖饭（with steamed white rice)</a>
             <a href="#menu">Lo Mein 捞面</a>
             <a href="#menu">Fried Rice 炒饭</a>
           </div>
-          <div className="menu-display">
+          <div id="menu" className="menu-display">
+            {this.renderItem(this.state.currentItem)}
           </div>
         </div>
       </div>
