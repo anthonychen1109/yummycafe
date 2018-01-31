@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const Header = () =>
   <div>
     <div className="header">
-      <div className="header-logo container">
+      <div className="header-logo">
         <h1>Yummy Cafe</h1>
       </div>
     </div>
