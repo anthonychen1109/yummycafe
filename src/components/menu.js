@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 import Appetizer from './appetizer';
 import ColdDish from './cold_dish';
 import Soup from './soup';
+import CookSpecials from './cook_specials';
+import Noodles from './noodles';
+import Vegetables from './vegetables';
 
 class Menu extends Component {
   constructor(props) {
@@ -28,6 +31,12 @@ class Menu extends Component {
         return <ColdDish />
       case 'soup':
         return <Soup />
+      case 'cook_specials':
+        return <CookSpecials />
+      case 'noodles':
+        return <Noodles />
+      case 'vegetables':
+        return <Vegetables />
       default:
         return null
     }
@@ -36,15 +45,15 @@ class Menu extends Component {
   render() {
     return (
       <div className="container">
-        <div className="menu">
+        <div id="menu" className="menu">
           <div className="menu-nav">
             <h2 className="menu-header">Menu</h2>
             <a href="#menu" onClick={() => this.setItem('appetizer')}>Dim Sum/Appetizers 小吃</a>
             <a href="#menu" onClick={() => this.setItem('cold_dish')}>Cold Dish 凉菜</a>
             <a href="#menu" onClick={() => this.setItem('soup')}>Soup 汤</a>
-            <a href="#menu">Cook Specials 特色推荐</a>
-            <a href="#menu">Noodle/Cold Noodle 面/凉面</a>
-            <a href="#menu">Vegetables 什蔬</a>
+            <a href="#menu" onClick={() => this.setItem('cook_specials')}>Cook Specials 特色推荐</a>
+            <a href="#menu" onClick={() => this.setItem('noodles')}>Noodle/Cold Noodle 面/凉面</a>
+            <a href="#menu" onClick={() => this.setItem('vegetables')}>Vegetables 什蔬</a>
             <a href="#menu">Chicken 鸡</a>
             <a href="#menu">Fish 鱼</a>
             <a href="#menu">Beef 牛</a>
@@ -56,7 +65,7 @@ class Menu extends Component {
             <a href="#menu">Lo Mein 捞面</a>
             <a href="#menu">Fried Rice 炒饭</a>
           </div>
-          <div id="menu" className="menu-display">
+          <div className="menu-display">
             {this.renderItem(this.state.currentItem)}
           </div>
         </div>

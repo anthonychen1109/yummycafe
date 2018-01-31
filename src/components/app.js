@@ -2,6 +2,7 @@ import React from 'react';
 
 // COMPONENTS
 import Navbar from './navbar';
+import Header from './header';
 import About from './about';
 import Menu from './menu';
 import Gallery from './gallery';
@@ -12,6 +13,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
+      <Header />
       <About />
       <Menu />
       <Gallery />

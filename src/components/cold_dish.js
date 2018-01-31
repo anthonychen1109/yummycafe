@@ -59,7 +59,7 @@ const appetizer = [
 ]
 
 const ColdDish = () =>
-  <div className="appetizer">
+  <div className="cold_dish">
     <h3 className="item-header">Cold Dish 凉菜</h3>
     {appetizer.map((item, index) => {
       return (
