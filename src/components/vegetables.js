@@ -165,7 +165,7 @@ const vegetables = [
 
 const Vegetables = () =>
   <div className="vegetables">
-    <h3 className="item-header">Noodle/Cold Noodle 面/凉面</h3>
+    <h3 className="item-header">Vegetables 什蔬</h3>
     {vegetables.map((item, index) => {
       return (
         <div key={item+index} className="grid animated fadeIn">

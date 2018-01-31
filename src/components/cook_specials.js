@@ -40,7 +40,7 @@ const cook_specials = [
 
 const CookSpecials = () =>
   <div className="cook_specials">
-    <h3 className="item-header">Cook Specials特色推荐</h3>
+    <h3 className="item-header">Cook Specials 特色推荐</h3>
     {cook_specials.map((item, index) => {
       return (
         <div key={item+index} className="grid animated fadeIn">

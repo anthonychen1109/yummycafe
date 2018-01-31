@@ -7,6 +7,17 @@ import Soup from './soup';
 import CookSpecials from './cook_specials';
 import Noodles from './noodles';
 import Vegetables from './vegetables';
+import Chicken from './chicken';
+import Fish from './fish';
+import Beef from './beef';
+import Shrimp from './shrimp';
+import Pork from './pork';
+import Duck from './duck';
+import Rabbit from './rabbit';
+import RiceCombo from './rice_combo';
+import LoMein from './lomein';
+import FriedRice from './friedrice';
+import Beverages from './beverages';
 
 class Menu extends Component {
   constructor(props) {
@@ -23,7 +34,6 @@ class Menu extends Component {
   }
 
   renderItem = (item) => {
-    console.log("renderItem", this.state.currentItem);
     switch(item) {
       case 'appetizer':
         return <Appetizer />
@@ -37,6 +47,28 @@ class Menu extends Component {
         return <Noodles />
       case 'vegetables':
         return <Vegetables />
+      case 'chicken':
+        return <Chicken />
+      case 'fish':
+        return <Fish />
+      case 'beef':
+        return <Beef />
+      case 'shrimp':
+        return <Shrimp />
+      case 'pork':
+        return <Pork />
+      case 'duck':
+        return <Duck />
+      case 'rabbit':
+        return <Rabbit />
+      case 'rice_combo':
+        return <RiceCombo />
+      case 'lomein':
+        return <LoMein />
+      case 'friedrice':
+        return <FriedRice />
+      case 'beverages':
+        return <Beverages />
       default:
         return null
     }
@@ -45,7 +77,7 @@ class Menu extends Component {
   render() {
     return (
       <div className="container">
-        <div id="menu" className="menu">
+        <div className="menu">
           <div className="menu-nav">
             <h2 className="menu-header">Menu</h2>
             <a href="#menu" onClick={() => this.setItem('appetizer')}>Dim Sum/Appetizers 小吃</a>
@@ -54,18 +86,19 @@ class Menu extends Component {
             <a href="#menu" onClick={() => this.setItem('cook_specials')}>Cook Specials 特色推荐</a>
             <a href="#menu" onClick={() => this.setItem('noodles')}>Noodle/Cold Noodle 面/凉面</a>
             <a href="#menu" onClick={() => this.setItem('vegetables')}>Vegetables 什蔬</a>
-            <a href="#menu">Chicken 鸡</a>
-            <a href="#menu">Fish 鱼</a>
-            <a href="#menu">Beef 牛</a>
-            <a href="#menu">Shrimp 虾</a>
-            <a href="#menu">Pork 肉</a>
-            <a href="#menu">Duck鸭</a>
-            <a href="#menu">Rabbit 兔</a>
-            <a href="#menu">Rice Combo盖饭（with steamed white rice)</a>
-            <a href="#menu">Lo Mein 捞面</a>
-            <a href="#menu">Fried Rice 炒饭</a>
+            <a href="#menu" onClick={() => this.setItem('chicken')}>Chicken 鸡</a>
+            <a href="#menu" onClick={() => this.setItem('fish')}>Fish 鱼</a>
+            <a href="#menu" onClick={() => this.setItem('beef')}>Beef 牛</a>
+            <a href="#menu" onClick={() => this.setItem('shrimp')}>Shrimp 虾</a>
+            <a href="#menu" onClick={() => this.setItem('pork')}>Pork 肉</a>
+            <a href="#menu" onClick={() => this.setItem('duck')}>Duck鸭</a>
+            <a href="#menu" onClick={() => this.setItem('rabbit')}>Rabbit 兔</a>
+            <a href="#menu" onClick={() => this.setItem('rice_combo')}>Rice Combo 盖饭（with steamed white rice)</a>
+            <a href="#menu" onClick={() => this.setItem('lomein')}>Lo Mein 捞面</a>
+            <a href="#menu" onClick={() => this.setItem('friedrice')}>Fried Rice 炒饭</a>
+            <a href="#menu" onClick={() => this.setItem('beverages')}>Beverages</a>
           </div>
-          <div className="menu-display">
+          <div id="menu" className="menu-display">
             {this.renderItem(this.state.currentItem)}
           </div>
         </div>

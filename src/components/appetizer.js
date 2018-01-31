@@ -50,7 +50,7 @@ const appetizer = [
 
 const Appetizer = () =>
   <div className="appetizer">
-    <h3 className="item-header">Dim Sum/Appetizers小吃</h3>
+    <h3 className="item-header">Dim Sum/Appetizers 小吃</h3>
     {appetizer.map((item, index) => {
       return (
         <div key={item+index} className="grid animated fadeIn">
