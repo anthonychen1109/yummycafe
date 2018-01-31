@@ -10,11 +10,16 @@ ul.topnav {
   background-color: black;
   color: white;
   display: flex;
+  font-family: "brandon_light";
   font-size: 14px;
   height: 40px;
   justify-content: space-around;
   opacity: 0.8;
-  padding-left: 0; }
+  padding-left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9000; }
   ul.topnav li {
     list-style: none; }
     ul.topnav li a {
@@ -25,6 +30,29 @@ ul.topnav {
 ul.topnav li.dropdownIcon {
   display: none; }
 
+.header {
+  background-attachment: fixed;
+  background-image: url("../images/5.jpg");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%; }
+
+.header-logo {
+  display: block;
+  padding-top: 40px;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  z-index: 1; }
+  .header-logo h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 3px black; }
+
 .about {
   display: flex;
   justify-content: space-around;
@@ -34,12 +62,15 @@ ul.topnav li.dropdownIcon {
     padding: 0 16px 16px 0;
     width: 100%; }
     .about .about-image img {
-      width: 100%; }
+      max-width: 100%; }
   .about .about-text {
     flex: 1;
     padding: 0 16px 16px 0; }
     .about .about-text h2 {
+      font-family: "Raleway, sans-serif";
       text-align: center; }
+    .about .about-text p {
+      font-family: "Raleway, sans-serif"; }
 
 .menu-header {
   text-align: center; }
@@ -55,6 +86,8 @@ ul.topnav li.dropdownIcon {
   display: flex;
   flex-direction: column;
   padding: 0 16px 16px 0; }
+  .menu-nav h2 {
+    margin-bottom: 40px; }
 
 .menu-display {
   flex: 2;
@@ -64,6 +97,30 @@ ul.topnav li.dropdownIcon {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   line-height: 30px; }
+  .grid div:nth-child(2) {
+    text-align: center; }
+  .grid div:nth-child(3) {
+    text-align: right; }
+  .grid div {
+    font-family: "Raleway, sans-serif"; }
+
+.item-header {
+  margin-bottom: 40px; }
+
+.item.subheader {
+  display: flex;
+  flex-direction: row; }
+
+.brownrice {
+  font-size: .8em;
+  margin: 0 auto;
+  width: 60%; }
+
+.parallax {
+  background-image: url("../images/6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh; }
 
 .gallery {
   display: flex;
@@ -81,16 +138,6 @@ ul.topnav li.dropdownIcon {
 
 .contact-header {
   text-align: center; }
-
-.contact-address {
-  margin-top: -120px;
-  text-align: center; }
-  .contact-address .contact-info {
-    background: white;
-    margin: 0 auto;
-    max-width: 70%;
-    position: relative;
-    z-index: 999; }
 
 .contact {
   margin-bottom: 80px; }
@@ -114,7 +161,6 @@ ul.topnav li.dropdownIcon {
 ul.footer {
   bottom: 0;
   padding-left: 0;
-  position: fixed;
   width: 100%; }
   ul.footer li.footer-hours {
     display: none; }

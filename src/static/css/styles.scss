@@ -16,11 +16,16 @@ ul.topnav {
   background-color: $nav-background-color;
   color: $nav-anchor-color;
   display: flex;
+  font-family: $font;
   font-size: $nav-font-size;
   height: $nav-height;
   justify-content: space-around;
   opacity: $opacity;
   padding-left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9000;
   li {
     list-style: none;
     a {
@@ -37,24 +42,56 @@ ul.topnav {
   }
 }
 
+// ################### HEADER #####################
+
+.header {
+  background-attachment: fixed;
+  background-image: url('../images/5.jpg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin-bottom: $margin-bot;
+  position: relative;
+  width: 100%
+}
+
+.header-logo {
+  display: block;
+  padding-top: 40px;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  z-index: 1;
+  h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 3px black;
+  }
+}
+
 // ################### ABOUT #####################
 .about {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 40px;
+  margin-bottom: $margin-bot;
   .about-image {
     flex: 1;
     padding: $about-left-right-padding;
     width: 100%;
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
   .about-text {
     flex: 1;
     padding: $about-left-right-padding;
     h2 {
+      font-family: $body-font;
       text-align: center;
+    }
+    p {
+      font-family: $body-font;
     }
   }
 }
@@ -70,13 +107,16 @@ ul.topnav {
 
 .menu {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: $margin-bot;
 }
 
 .menu-nav {
   display: flex;
   flex-direction: column;
   padding: $menu-left-right-padding;
+  h2 {
+    margin-bottom: $margin-bot;
+  }
 }
 
 .menu-display {
@@ -88,13 +128,45 @@ ul.topnav {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   line-height: 30px;
+  div:nth-child(2) {
+    text-align: center;
+  }
+  div:nth-child(3) {
+    text-align: right;
+  }
+  div {
+    font-family: $body-font;
+  }
+}
+
+.item-header {
+  margin-bottom: $margin-bot;
+}
+
+.item.subheader {
+  display: flex;
+  flex-direction: row;
+}
+
+.brownrice {
+  font-size: .8em;
+  margin: 0 auto;
+  width: 60%;
+}
+
+// ################### PARALLAX #####################
+.parallax {
+  background-image: url('../images/6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 30vh;
 }
 
 // ################### GALLERY #####################
 .gallery {
   display: flex;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: $margin-bot;
   h2 {
     text-align: center;
   }
@@ -114,20 +186,8 @@ ul.topnav {
   text-align: center;
 }
 
-.contact-address {
-  margin-top: -120px;
-  text-align: center;
-  .contact-info {
-    background: white;
-    margin: 0 auto;
-    max-width: 70%;
-    position: relative;
-    z-index: 999;
-  }
-}
-
 .contact {
-  margin-bottom: 80px;
+  margin-bottom: 2 * $margin-bot;
 }
 
 // ################### FOOTER #####################
@@ -153,7 +213,7 @@ ul.topnav {
 ul.footer {
   bottom: 0;
   padding-left: 0;
-  position: fixed;
+  // position: fixed;
   width: 100%;
   li.footer-hours {
     display: none;
@@ -218,6 +278,8 @@ ul.modal-hours {
     right: 0;
     padding-right: $nav-padding;
   }
+
+// ################### HEADER #####################
 
 // ################### ABOUT #####################
 
