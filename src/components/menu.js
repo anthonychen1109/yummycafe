@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 // COMPONENTS
 import Appetizer from './appetizer';
 import ColdDish from './cold_dish';
+import Soup from './soup';
 
 class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentItem: ''
+      currentItem: 'appetizer'
     };
     this.setItem = this.setItem.bind(this);
     this.renderItem = this.renderItem.bind(this);
@@ -25,6 +26,8 @@ class Menu extends Component {
         return <Appetizer />
       case 'cold_dish':
         return <ColdDish />
+      case 'soup':
+        return <Soup />
       default:
         return null
     }
@@ -33,12 +36,12 @@ class Menu extends Component {
   render() {
     return (
       <div className="container">
-        <h2 className="menu-header">Menu</h2>
         <div className="menu">
           <div className="menu-nav">
+            <h2 className="menu-header">Menu</h2>
             <a href="#menu" onClick={() => this.setItem('appetizer')}>Dim Sum/Appetizers 小吃</a>
             <a href="#menu" onClick={() => this.setItem('cold_dish')}>Cold Dish 凉菜</a>
-            <a href="#menu">Soup 汤</a>
+            <a href="#menu" onClick={() => this.setItem('soup')}>Soup 汤</a>
             <a href="#menu">Cook Specials 特色推荐</a>
             <a href="#menu">Noodle/Cold Noodle 面/凉面</a>
             <a href="#menu">Vegetables 什蔬</a>

@@ -50,10 +50,10 @@ const appetizer = [
 
 const Appetizer = () =>
   <div className="appetizer">
-    <h3>Dim Sum/Appetizers小吃</h3>
+    <h3 className="item-header">Dim Sum/Appetizers小吃</h3>
     {appetizer.map((item, index) => {
       return (
-        <div key={item+index} className="grid">
+        <div key={item+index} className="grid animated fadeIn">
           <div>{item.itemEN}</div>
           <div>{item.itemCN}</div>
           <div>{item.price}</div>

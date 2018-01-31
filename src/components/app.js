@@ -4,6 +4,8 @@ import React from 'react';
 import Navbar from './navbar';
 import About from './about';
 import Menu from './menu';
+import Gallery from './gallery';
+import Contact from './contact';
 import Footer from './footer';
 
 const App = () => {
@@ -12,6 +14,8 @@ const App = () => {
       <Navbar />
       <About />
       <Menu />
+      <Gallery />
+      <Contact />
       <Footer />
     </div>
   )

@@ -22,7 +22,7 @@ class Navbar extends Component {
     return (
       <nav>
         <ul className="topnav" id="dropdownClick">
-          <li className="logo"><a href="">Logo</a></li>
+          <li className="logo"><a href="">Yummy Cafe</a></li>
           <li><a href="">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>

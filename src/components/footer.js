@@ -82,7 +82,7 @@ class Footer extends Component {
                   style={customStyles}
                   contentLabel="Modal"
                 >
-                <p className="text-center">Logo</p>
+                <p className="text-center">Yummy Cafe</p>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12089.73215947593!2d-73.8321986!3d40.7524994!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfe2e75f4c95a77d!2sAbacus+Business+Computer+Inc!5e0!3m2!1sen!2sus!4v1517259817435"
                   width="100%"
