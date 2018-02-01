@@ -5,15 +5,18 @@ import Navbar from './navbar';
 import Header from './header';
 import About from './about';
 import Menu from './menu';
-import Gallery from './gallery';
 import Contact from './contact';
 import Footer from './footer';
+import Parallax from './parallax';
+
+// IMAGES
+import Parallax_img1 from '../static/images/2.jpg';
+import Parallax_img2 from '../static/images/10.jpg';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      bg: ''
     }
   }
   render() {
@@ -21,13 +24,11 @@ class App extends Component {
       <div>
         <Navbar />
         <Header />
-        <hr />
         <About />
-        <hr />
+        <Parallax img={Parallax_img1} />
         <Menu />
-        <hr />
+        <Parallax img={Parallax_img2} />
         <Contact />
-        <hr />
         <Footer />
       </div>
     )

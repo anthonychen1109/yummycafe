@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Navbar extends Component {
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#">Order Online</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><Link to={"/gallery"}>Gallery</Link></li>
           <li><a href="#contact">Contact</a></li>
           <li id="test" className="dropdownIcon">
             <a href="javascript:void(0);"

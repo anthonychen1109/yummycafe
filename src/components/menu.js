@@ -79,7 +79,7 @@ class Menu extends Component {
       <div className="container">
         <div className="menu">
           <div className="menu-nav">
-            <h2 className="menu-header">Menu</h2>
+            <h3 className="menu-header">Menu</h3>
             <a href="#menu" onClick={() => this.setItem('appetizer')}>Dim Sum/Appetizers 小吃</a>
             <a href="#menu" onClick={() => this.setItem('cold_dish')}>Cold Dish 凉菜</a>
             <a href="#menu" onClick={() => this.setItem('soup')}>Soup 汤</a>

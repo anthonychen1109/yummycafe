@@ -1,7 +1,7 @@
 import React from 'react';
 
 const About = () =>
-  <div className="about container">
+  <div id="about" className="about container">
     <div className="about-image">
       <img src={require('../static/images/1.jpg')} alt="img-1"/>
     </div>
