@@ -56,6 +56,18 @@ ul.topnav {
   width: 100%
 }
 
+.gallery-header {
+  background-attachment: fixed;
+  background-image: url('../images/4.jpg');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin-bottom: $margin-bot;
+  position: relative;
+  width: 100%
+}
+
 .header-logo {
   display: block;
   padding-top: 40px;
@@ -91,23 +103,26 @@ ul.topnav {
       text-align: center;
     }
     p {
-      font-family: $body-font;
+      font-family: $font;
     }
   }
 }
 
 // ################### MENU #####################
 .menu-header {
+  font-family: $body-font;
   text-align: center;
 }
 
 .item-header {
+  font-family: $body-font;
   text-align: center;
 }
 
 .menu {
   display: flex;
   margin-bottom: $margin-bot;
+  margin-top: 40px;
 }
 
 .menu-nav {
@@ -116,6 +131,9 @@ ul.topnav {
   padding: $menu-left-right-padding;
   h2 {
     margin-bottom: $margin-bot;
+  }
+  a {
+    font-family: $font;
   }
 }
 
@@ -154,40 +172,59 @@ ul.topnav {
   width: 60%;
 }
 
-// ################### PARALLAX #####################
-.parallax {
-  background-image: url('../images/6.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 30vh;
-}
-
 // ################### GALLERY #####################
 .gallery {
   display: flex;
   flex-direction: column;
   margin-bottom: $margin-bot;
   h2 {
+    font-family: $font;
     text-align: center;
   }
 }
 
-.gallery-images {
-  display: flex;
-  flex-wrap: wrap;
+.grid-item {
+  width:33.33%;
   img {
-    max-width: 200px;
-    width: 100%;
+    padding: 3px;
+    max-width: 100%;
+    @media only screen and (max-width: 800px) {
+      padding: 1px;
+    }
   }
 }
 
 // ################### CONTACT #####################
-.contact-header {
-  text-align: center;
-}
-
 .contact {
   margin-bottom: 2 * $margin-bot;
+  margin-top: 40px;
+}
+
+.contact-info {
+  div {
+    background-color: white;
+    margin: 0 auto;
+    margin-top: -120px;
+    position: relative;
+    width: 50%;
+    z-index: 999;
+    @media only screen and (max-width: 800px) {
+      width: 80%;
+    }
+    h2 {
+      padding-top: 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: .8em;
+      text-align: center;
+    }
+  }
+}
+
+.contact-header {
+  font-family: $body-font;
 }
 
 // ################### FOOTER #####################
@@ -210,6 +247,12 @@ ul.topnav {
   }
 }
 
+.footer-hours, .footer-pin {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 ul.footer {
   bottom: 0;
   padding-left: 0;
@@ -226,9 +269,9 @@ ul.footer {
   }
 }
 
-ul.modal-hours {
-  li {
-    list-style: none;
+.modal-hours {
+  p {
+    text-align: center;
   }
 }
 
@@ -256,16 +299,20 @@ ul.modal-hours {
     flex-direction: column;
     justify-content: space-around;
     opacity: $opacity;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
     li {
        display: inline;
        list-style: none;
        float: none;
+       z-index: 99999;
        a {
            color: $nav-anchor-color;
            display: block;
            font-size: $nav-font-size;
            margin-bottom: $nav-margin;
+           padding-left: 10px;
            padding-top: $nav-padding;
            text-decoration: none;
          }
@@ -279,8 +326,6 @@ ul.modal-hours {
     padding-right: $nav-padding;
   }
 
-// ################### HEADER #####################
-
 // ################### ABOUT #####################
 
   .about {
@@ -293,6 +338,12 @@ ul.modal-hours {
   a {
     text-align: center;
   }
+}
+
+// ################### GALLERY #####################
+
+.modal-img {
+  max-width: 300px;
 }
 
 // ################### FOOTER #####################

@@ -40,10 +40,16 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- <script src="/path/to/isotope.pkgd.min.js"></script> -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="text/javascript">
       $(window).scroll(function() {
         let e = (window.pageYOffset)/-5
+        let f = e/10
         $('.header').css("background-position", "50% " + e + "px")
+        $('.gallery-header').css("background-position", "50% " + e + "px")
+        $('.parallax').css("background-position", "50% " + f + "px")
       })
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
