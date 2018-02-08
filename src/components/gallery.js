@@ -107,9 +107,8 @@ class Gallery extends Component {
       <div>
         <nav>
           <ul className="topnav" id="dropdownClick">
-            <li className="logo"><a href="">Yummy Cafe</a></li>
-            <li><Link to="/">Home</Link></li>
-            <li><a href="#">Order Online</a></li>
+            <li className="logo"><a href="/">Yummy Cafe</a></li>
+            <li><a data-glf-cuid="4d098e5d-5767-4109-ae57-d4a4cf86748d" data-glf-ruid="66483f67-fcc1-45de-9915-d6bc795c1e3a" href="#">Order Online</a></li>
             <li><a href="#contact">Contact</a></li>
             <li id="test" className="dropdownIcon">
               <a href="javascript:void(0);"
